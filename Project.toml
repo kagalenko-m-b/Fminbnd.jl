@@ -1,4 +1,4 @@
-name = "FMin"
+name = "Fminbnd"
 uuid = "b7bab496-830c-4b53-8aec-8b9a988c40b4"
 authors = ["kagalenko-m-b <16374215+kagalenko-m-b@users.noreply.github.com> and contributors"]
 version = "1.0.0"

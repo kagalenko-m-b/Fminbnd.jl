@@ -1,8 +1,8 @@
-module FMin
+module Fminbnd
 
-export fmin
+export fminbnd
 """
-    x = fmin(ax, bx, f, tol)
+    x = fminbnd(ax, bx, f, tol)
 
 
     an approximation  x  to the point where  f  attains a minimum  on
@@ -48,7 +48,7 @@ minimization without derivatives, prentice - hall, inc. (1973).
 Rewrite in Julia of [fmin from Netlib](http://www.netlib.org/fmm/fmin.f)
 by Mikhail Kagalenko, January 2024
 """
-function fmin(ax::T, bx::T, f::Function, tol::T=eps(T)) where T<:AbstractFloat
+function fminbnd(ax::T, bx::T, f::Function, tol::T=eps(T)) where T<:AbstractFloat
     #
     #  c is the squared inverse of the golden ratio
     #
