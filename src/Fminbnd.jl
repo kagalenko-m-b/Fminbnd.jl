@@ -2,7 +2,7 @@ module Fminbnd
 
 export fminbnd
 """
-    x = fminbnd(ax, bx, f, tol)
+    x = fminbnd(f, ax, bx,  tol)
 
 
     an approximation  x  to the point where  f  attains a minimum  on
@@ -11,10 +11,10 @@ the interval  (ax,bx)  is determined.
 
 input..
 
-ax    left endpoint of initial interval
-bx    right endpoint of initial interval
 f     function subprogram which evaluates  f(x)  for any  x
       in the interval  (ax,bx)
+ax    left endpoint of initial interval
+bx    right endpoint of initial interval
 tol   desired length of the interval of uncertainty of the final
       result ( .ge. 0.0d0)
 
@@ -48,7 +48,7 @@ minimization without derivatives, prentice - hall, inc. (1973).
 Rewrite in Julia of [fmin from Netlib](http://www.netlib.org/fmm/fmin.f)
 by Mikhail Kagalenko, January 2024
 """
-function fminbnd(ax::T, bx::T, f::Function, tol::T=eps(T)) where T<:AbstractFloat
+function fminbnd(f::Function, ax::T, bx::T, tol::T=eps(T)) where T<:AbstractFloat
     #
     #  c is the squared inverse of the golden ratio
     #

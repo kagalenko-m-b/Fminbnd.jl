@@ -6,6 +6,6 @@ using Test
     ax = -4.0
     bx = 0.0
     x = -pi/2
-    xmin = fminbnd(ax, bx, sin, tol)
+    xmin = fminbnd(sin, ax, bx, tol)
     @test abs(xmin - x) <= 10*tol
 end
