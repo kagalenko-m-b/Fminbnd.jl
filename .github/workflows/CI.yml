@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - fix-golden-ratio-constant
     tags: ['*']
   pull_request:
   workflow_dispatch:
