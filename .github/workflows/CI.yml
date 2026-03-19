@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - fix-golden-ratio-constant
     tags: ['*']
   pull_request:
   workflow_dispatch:
@@ -32,6 +33,8 @@ jobs:
           - x64
     steps:
       - uses: actions/checkout@v6
+      - name: Install gfortran
+        run: sudo apt-get install -y gfortran
       - uses: julia-actions/setup-julia@v2
         with:
           version: ${{ matrix.version }}

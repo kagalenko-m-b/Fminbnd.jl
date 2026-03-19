@@ -52,7 +52,7 @@ function fminbnd(f::Function, ax::T, bx::T, tol::T=eps(T)) where T<:AbstractFloa
     #
     #  c is the squared inverse of the golden ratio
     #
-    c = (3 - sqrt(5*one(T)/2))/2
+    c = (3 - sqrt(5*one(T)))/2
     #
     #  eps is the square root of the relative machine precision.
     #
